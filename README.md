@@ -54,17 +54,24 @@ const map = new Map({
           zoom: 2
         });
 
-  const locate = new Locate({
+  const track = new Track({
           view: view,
-          useHeadingEnabled: false,
-          goToOverride: function(view, options) {
-            options.target.scale = 1500;
-            return view.goTo(options.target);
-          }
+          graphic: new Graphic({
+            symbol: {
+              type: "simple-marker",
+              size: "12px",
+              color: "green",
+              outline: {
+                color: "#efefef",
+                width: "1.5px"
+              }
+            }
+          }),
+          useHeadingEnabled: false
         });
-        view.ui.add(locate, "top-left");
+        view.ui.add(track, "top-left");
 
-  });
+   });
     </script>
 </head>
   <body>
