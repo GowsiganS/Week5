@@ -18,16 +18,27 @@
 
 <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
 <script src="https://js.arcgis.com/4.18/"></script>
+  
+ <script>
+      require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) 
+  {
+     esriConfig.apiKey = "AAPK0ffde8b49bd042d39fee7297dab05d93VJ343mJKhwXIKfh0G6HA4DgMIbfkwsxC9R_7TnVBGA6oy_JT9btyg4t7JGAr4tv7";
 
-  </head>
+  const map = new Map({
+   basemap: "arcgis-topographic" // 
+       });
+       
+   const view = new MapView({
+          map: map,
+          center: [-118.805, 34.027], // 
+          zoom: 13, // 
+          container: "viewDiv" // 
+        });
+
+  });
+  </script>
+</head>
   <body>
     <div id="viewDiv"></div>
   </body>
-  
-<script>
-      require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
-
-});
-</script>
-  
 </html>
