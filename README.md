@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable =no">
     
    <title>Tutorial 1 - ArcGIS API for JavaScript - Display a map</title>
 
